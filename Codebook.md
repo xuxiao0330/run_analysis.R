@@ -43,7 +43,7 @@ meanx <- grep("mean()",colnames(totaldata))
 sdx <- grep("std()",colnames(totaldata))
 meansdx <- totaldata[,c(1,2,meanx,sdx)]
 ```
-5. Getting tidy data and output.
+Getting tidy data and output.
 ```{r, eval = FALSE}
 # Using melt getting tidy data
 meansdxmelt <- melt(meansdx,id =c("subject","Activity"))
