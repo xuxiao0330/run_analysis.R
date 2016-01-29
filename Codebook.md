@@ -48,7 +48,6 @@ meansdx <- totaldata[,c(1,2,meanx,sdx)]
 # Using melt getting tidy data
 meansdxmelt <- melt(meansdx,id =c("subject","Activity"))
 tidydata <- dcast(meansdxmelt, subject + Activity ~ variable, mean)
-
 # Output tidy data
 write.table(tidydata,file = "tidydata.txt",row.names = FALSE,sep=",")
 ```
